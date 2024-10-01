@@ -21,8 +21,6 @@ function fastForwardVideo() {
     video.currentTime += 10;
 }
 
-
-
 // Set the redirect link
 const redirectUrl = 'https://noohapou.com/4/7939569';
 
@@ -45,7 +43,16 @@ function handleRedirect() {
 }
 
 // Add an event listener for clicks anywhere on the page
-document.addEventListener('click', function() {
-    handleRedirect();
+document.addEventListener('click', function(event) {
+    // Prevent redirect if clicking on the video element
+    if (event.target !== video) {
+        handleRedirect();
+    }
 });
 
+// Optional: Allow the user to start the video first
+document.addEventListener('DOMContentLoaded', function() {
+    video.addEventListener('play', function() {
+        handleRedirect(); // Redirect when video starts playing, if conditions are met
+    });
+});
