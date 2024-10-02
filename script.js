@@ -1,4 +1,4 @@
-<script>
+
   // Set the redirect link
   const redirectUrl = 'https://noohapou.com/4/7939569';
 
@@ -45,4 +45,4 @@
   document.addEventListener('click', function() {
     handleRedirect();
   });
-</script>
+
