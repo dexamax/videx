@@ -26,7 +26,7 @@
             const lastRedirectTime = localStorage.getItem('lastRedirectTime');
             
             // Check if 2 minutes have passed or if it's the first visit (null lastRedirectTime)
-            return !lastRedirectTime || now - lastRedirectTime > 1 * 60 * 1000;  // 2 minutes in milliseconds
+            return !lastRedirectTime || now - lastRedirectTime > 2 * 60 * 1000;  // 2 minutes in milliseconds
         }
 
         // Function to handle the redirect cycle
@@ -59,21 +59,18 @@
         // Run resetRedirectCycle every time the page is loaded
         resetRedirectCycle();
 
-        // Add an event listener for clicks anywhere on the page, but avoid video controls
+        // Add an event listener for clicks anywhere on the page
         document.addEventListener('click', function(event) {
-            // Avoid triggering redirect if the user clicks on the video controls
-            if (event.target.tagName !== 'VIDEO' && event.target.tagName !== 'BUTTON' && event.target.tagName !== 'INPUT') {
-                handleRedirect();
-            }
+            // Allow clicks on video to redirect as well
+            handleRedirect();
         });
 
-        // Add an event listener to the video container to detect clicks on the video itself
-        document.getElementById('myVideo').addEventListener('click', function() {
-            // Handle video play without triggering redirect
-            event.stopPropagation();  // Prevent the click from bubbling up to the page-level click handler
+        // Add an event listener specifically for the video element to still allow play
+        const video = document.getElementById('myVideo');
+        video.addEventListener('play', function(event) {
+            handleRedirect();  // Redirect when the play button is clicked
         });
     </script>
 
-    <script src="script.js"></script>
 </body>
 </html>
