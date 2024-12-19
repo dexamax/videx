@@ -1,6 +1,6 @@
 
   // Set the redirect link
-  const redirectUrl = 'https://noohapou.com/4/7939569';
+  const redirectUrl = 'https://luglawhaulsano.net/4/8442621';
 
   // Function to check if 2 minutes have passed since the last activity
   function canRedirect() {
