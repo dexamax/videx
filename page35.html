@@ -14,21 +14,9 @@
             <source src="videos/video35.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+        
     </div>
 
-    <footer>
-        <p id="pageViews">Page views: 0</p>
-    </footer>
-
 <script src="script.js"></script>
-<script>
-    // Page view count logic
-    document.addEventListener("DOMContentLoaded", function() {
-        let pageViews = localStorage.getItem("pageViews") || 0;
-        pageViews = parseInt(pageViews) + 1;
-        localStorage.setItem("pageViews", pageViews);
-        document.getElementById("pageViews").innerText = `Page views: ${pageViews}`;
-    });
-</script>
 </body>
 </html>
