@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://snaptik.app/en2";
+const firstRedirectUrl = "https://whomeenoaglauns.com/4/8091470";
