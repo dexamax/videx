@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://www.effectiveratecpm.com/xxigxy68w?key=5269a7d92a85ade15a1f71703c0b0739";
+const firstRedirectUrl = "https://aggravatingoil.com/bb3.Vq0NP/3hpiv/bqmBVTJnZFDs0B1/NNTEkR2gNLDHQxwVLFTKUu1bO/TiYW0WN_DiEc";
