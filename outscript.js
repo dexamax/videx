@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://whomeenoaglauns.com/4/6825061";
+const firstRedirectUrl = "https://ptukseew.top/4/8442621";
