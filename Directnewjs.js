@@ -1,5 +1,5 @@
 // URL to redirect to
-const redirectUrl = "https://whoushex.top/4/6825061";
+const redirectUrl = "https://whoushex.top/4/8091470";
 
 // Function to handle button click
 function redirectToLink() {
