@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://phoampor.top/4/9134749";
+const firstRedirectUrl = "https://phoampor.top/4/9122239";
