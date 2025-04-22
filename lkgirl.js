@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://uvoonaix.top/4/9134749";
+const firstRedirectUrl = "https://uvoonaix.top/4/9122239";
