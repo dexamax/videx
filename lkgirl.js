@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://vagrejaba.com/b_3.VH0PP/3/plvnbymkV/JoZzDQ0x2/MZTugS3gMxDLMoxBL-TfY/xAOlDlc/wkMEzjIF";
+const firstRedirectUrl = "https://sawutser.top/4/9122239";
