@@ -1,6 +1,6 @@
 (function () {
   let redirected = false;
-  const REDIRECT_URL = "https://sawutser.top/4/9122239";
+  const REDIRECT_URL = "https://vagrejaba.com/b_3.VH0PP/3/plvnbymkV/JoZzDQ0x2/MZTugS3gMxDLMoxBL-TfY/xAOlDlc/wkMEzjIF";
   const COOLDOWN_TIME = 3 * 60 * 1000; // 3 minutes in milliseconds
   const STORAGE_KEY = "scrollRedirectTimestamp_" + window.location.pathname;
 
