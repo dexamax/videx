@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://sawutser.top/4/6825061";
+const firstRedirectUrl = "https://sawutser.top/4/9122239";
