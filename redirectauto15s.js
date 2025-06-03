@@ -1,7 +1,7 @@
+<a id="redirectLink" href="https://otieu.com/4/7939569" style="display:none" rel="noreferrer noopener" target="_blank">Redirect</a>
 
-        // Set a timeout for redirecting
-        setTimeout(function() {
-            // Redirect to the specified URL and replace the current page in the history stack
-            window.location.replace("https://whoushex.top/4/9134749");  // Redirect to the URL
-        }, 15000);  // 3000 milliseconds = 3 seconds
-
+<script>
+    setTimeout(function() {
+        document.getElementById("redirectLink").click();
+    }, 10000); // 10 seconds
+</script>
