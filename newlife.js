@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://otieu.com/4/9391190";
+const firstRedirectUrl = "https://newlifejs.blogspot.com/";
