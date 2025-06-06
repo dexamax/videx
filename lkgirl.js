@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://redirectkl.blogspot.com/";
+const firstRedirectUrl = "https://redirectkathalanthex.blogspot.com/";
