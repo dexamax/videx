@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://zaaapredirectxxxxxx.blogspot.com/";
+const firstRedirectUrl = "https://otieu.com/4/7939569";
