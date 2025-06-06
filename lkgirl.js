@@ -1,1 +1,1 @@
-const firstRedirectUrl = "https://redirectkathalanthex.blogspot.com/";
+const firstRedirectUrl = "https://otieu.com/4/9134749";
