@@ -1,1 +1,1 @@
-const tempLink = "https://otieu.com/4/9286605";
+const tempLink = "https://otieu.com/4/9122239";
