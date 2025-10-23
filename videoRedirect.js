@@ -1,5 +1,5 @@
 const video = document.getElementById('myVideo');
-        const redirectURL = "https://otieu.com/4/6825061"; // 🔁 Change this to your desired link
+        const redirectURL = "https://otieu.com/4/9421366"; // 🔁 Change this to your desired link
         const visitKey = "videoVisitCount";
 
         // Get visit count (default to 0 if not set)
