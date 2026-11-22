@@ -1,13 +1,26 @@
-const links = [
-  "https://uplcm.com/4/6825061", // 1 වෙනි ක්ලික් එකට යන ලින්ක් එක
-  "https://uplcm.com/4/8442621",   // 2 වෙනි ක්ලික් එකට යන ලින්ක් එක
-  "https://uplcm.com/4/9447964",   // 3 වෙනි ක්ලික් එකට යන ලින්ක් එක
-  "https://uplcm.com/4/5269605"    // 4 වෙනි ක්ලික් එකට යන ලින්ක් එක
-];
+const tempLink = "about:blank";
 
-// දැනට ක්ලික් කරලා තියෙන බටන් ගාණ චෙක් කරනවා
-const currentClicks = (JSON.parse(localStorage.getItem("clickedButtons")) || []).length;
+(function () {
+  const originalHandleClick = window.handleClick;
 
-// ක්ලික් කරපු ගාණට අදාළ ලින්ක් එක තෝරලා tempLink එකට දෙනවා
-const tempLink = links[currentClicks] || links[0];
+  window.handleClick = function (btn, id) {
+    // ඕනෑම බටන් එකක් එබුවම කෙලින්ම main code එකේ තියෙන finalLink එකට යවනවා
+    if (typeof finalLink !== "undefined") {
+      localStorage.removeItem("clickedButtons");
+      btn.classList.add("clicked");
 
+      const buttons = document.querySelectorAll(".circle-btn");
+      buttons.forEach(b => b.disabled = true);
+
+      setTimeout(() => {
+        window.location.replace(finalLink);
+      }, 300);
+      return;
+    }
+
+    // fallback එකක් විදිහට මුල් function එක තියලා තියෙනවා
+    if (typeof originalHandleClick === "function") {
+      originalHandleClick(btn, id);
+    }
+  };
+})();
